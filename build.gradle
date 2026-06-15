@@ -24,7 +24,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
 	// Swagger UI 사용하기 위한 의존성
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.0'
 
 	// Lombok 라이브러리를 컴파일 시에만 사용하도록 설정
 	// Getter, Setter 등을 자동으로 생성
