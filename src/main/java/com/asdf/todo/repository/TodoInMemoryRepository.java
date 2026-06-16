@@ -1,10 +1,8 @@
 package com.asdf.todo.repository;
 
 import com.asdf.todo.model.Todo;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.stereotype.Repository;
 
@@ -26,14 +24,15 @@ public class TodoInMemoryRepository {
     }
 
     /** id로 Todo 하나를 찾아서 반환하는 조회 함수 **/
-    public Todo findById(Long id){
+    // Optional로 null을 안전하게 다뤘기 때문에 if로 예외처리는 스킵한다
+    public Optional<Todo> findById(Long id){
         Todo todo = todoMap.get(id);
 
         // 예외처리
-        if(todo == null){
-            throw new RuntimeException("Todo not found");
-        }
-        return todo;
+//        if(todo == null){
+//            throw new RuntimeException("Todo not found");
+//        }
+        return Optional.ofNullable(todo);
     }
 
     /** Todo를 저장 또는 수정하는 메서드로 id가 없으면 새로 생성, 있으면 수정해서 map에 저장 **/
