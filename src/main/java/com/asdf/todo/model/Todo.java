@@ -18,7 +18,7 @@ import lombok.NonNull;
 public class Todo {
     // 이 필드를 클래스 밖에서는 직접 못 건드리고 메서드(getter/setter)로만 접근하게 하기 위해 private 사용
 
-    private Long id;가
+    private Long id;
 
     //  타이틀 필드가 null이면 안된다.
     //  단순히 의미 표시이지 실질적인 보안/검증 역할을 해주지 않는다
